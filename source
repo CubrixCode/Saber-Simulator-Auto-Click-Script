@@ -1,0 +1,78 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ActivateAuto = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Workspace
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Main.Position = UDim2.new(0.0629921257, 0, 0.293357939, 0)
+Main.Size = UDim2.new(0, 510, 0, 271)
+Main.Active = true
+Main.Draggable = true
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+TextLabel.Size = UDim2.new(0, 510, 0, 30)
+TextLabel.Font = Enum.Font.Nunito
+TextLabel.Text = "Onii Gay Furry Sex Toy Collection"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+ActivateAuto.Name = "ActivateAuto"
+ActivateAuto.Parent = Main
+ActivateAuto.BackgroundColor3 = Color3.fromRGB(168, 168, 168)
+ActivateAuto.Position = UDim2.new(0, 0, 0.239852399, 0)
+ActivateAuto.Size = UDim2.new(0, 200, 0, 50)
+ActivateAuto.Font = Enum.Font.SourceSans
+ActivateAuto.Text = "Jerk Off Ur Saber"
+ActivateAuto.TextColor3 = Color3.fromRGB(0, 0, 0)
+ActivateAuto.TextSize = 14.000
+
+local state = false
+ActivateAuto.MouseButton1Down:connect(function()
+	state = true
+end)
+if state == true then
+	while wait do
+		game:GetService("ReplicatedStorage").Events.Clicked:FireServer()
+		
+	end
+	
+end
+
+if state == true and ActivateAuto.MouseButton1Down then
+	local state = false 
+	wait (0.1)
+end
+
+if state == true then
+	ActivateAuto.State1.Text = "On"
+	
+end
+
+if state == false then 
+	ActivateAuto.State1.Text = "Off"
+end
+
+	
+
+
+
+TextLabel_2.Parent = ActivateAuto
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+TextLabel_2.Position = UDim2.new(0, 0, 1, 0)
+TextLabel_2.Size = UDim2.new(0, 110, 0, 24)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Off"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
